@@ -1,8 +1,9 @@
 #!/bin/bash
 ###
-### Enable Byobu
+### Enable Byobu & Toggle UTF-8
 ###
 byobu enable
+/usr/lib/byobu/include/toggle-utf8
 
 ###
 ### Update ~/.bashrc file so pyenv envs persist
@@ -20,7 +21,8 @@ EOF
 ###
 sudo apt update
 sudo apt upgrade -y
-sudo apt purge lxd
+sudo apt purge lxd -y
+sudo apr autoremove -y
 sudo snap install lxd
 sudo apt install -y --no-install-recommends \
   make build-essential libssl-dev zlib1g-dev libbz2-dev \
@@ -46,7 +48,7 @@ git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-
 ###
 ### Clone aws-lxd
 ###
-git clone git@bitbucket.org:tsanghan/aws-lxd.git
+git clone git@bitbucket.org:tsanghan/aws-lxd.git ~/aws-lxd
 
 ###
 ### Install python 3.8.2, set to global and rehssh
@@ -66,7 +68,7 @@ pip install pipenv
 ###
 ### Change directory to aws-lxd
 ###
-cd aws-lxd
+cd ~/aws-lxd
 
 ###
 ### Install in venv ansible and jemspath
