@@ -2,7 +2,7 @@
 ###
 ### Enable Byobu & Toggle UTF-8
 ###
-byobu enabled
+byobu-enable
 /usr/lib/byobu/include/toggle-utf8
 
 ###
