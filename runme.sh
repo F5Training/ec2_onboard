@@ -2,7 +2,7 @@
 ###
 ### Enable Byobu & Toggle UTF-8
 ###
-byobu enable
+byobu enabled
 /usr/lib/byobu/include/toggle-utf8
 
 ###
@@ -22,7 +22,7 @@ EOF
 sudo apt update
 sudo apt upgrade -y
 sudo apt purge lxd -y
-sudo apr autoremove -y
+sudo apt autoremove -y
 sudo snap install lxd
 sudo apt install -y --no-install-recommends \
   make build-essential libssl-dev zlib1g-dev libbz2-dev \
